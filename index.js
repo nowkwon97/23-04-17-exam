@@ -34,7 +34,7 @@ function examThree(str) {
 
 function examFour(array) {
   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
-  if(typeof(array === 'array')) {
+  if(Array.isArray(array)) {
     for(let i = 0; i < array.length; i++) {
       let min;
       min = array[0];
@@ -50,6 +50,15 @@ function examFour(array) {
 
 function examFive(array) {
   // 배열(array)만을 인자로 받아서 실행할 수 있도록 작성하시오.
+  if(Array.isArray(array)) {
+    let sum = 0;
+    for(let i = 0; i < array.length; i++) {
+      sum = sum + array[i];
+    }
+    return sum;
+  }else{
+    return console.error("배열을 입력하시오.");
+  }
 }
 
 console.log(examOne(2,3)); // Question 1 덧셈 로직 만들기
